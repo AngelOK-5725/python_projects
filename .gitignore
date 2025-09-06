@@ -1,0 +1,59 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual envs
+.venv/
+venv/
+ENV/
+env/
+
+# Dependencies & packaging
+*.egg-info/
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+*.egg
+.eggs/
+
+# Logs & runtime
+*.log
+*.pid
+celerybeat-schedule
+
+# Tests & coverage
+.pytest_cache/
+.coverage*
+htmlcov/
+.tox/
+.nox/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# Parsers/Notebooks
+.scrapy/
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# dotenv
+.env
+.env.*
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
