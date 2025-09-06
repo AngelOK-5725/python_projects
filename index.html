@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хамраева Тамила - Резюме</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .resume-wrapper {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            min-height: 100vh;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1100px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+        }
+
+        /* Left Column */
+        .left-column {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        .left-column::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .left-column > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            /* background-image: ; */
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 300;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .position {
+            font-size: 16px;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .contact-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            opacity: 0.8;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+            font-size: 14px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .skills-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Right Column */
+        .right-column {
+            padding: 40px;
+            background: #fafafa;
+        }
+
+        .right-section {
+            margin-bottom: 40px;
+        }
+
+        .right-section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .right-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .education-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #667eea;
+        }
+
+        .education-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .education-details {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .education-description {
+            font-size: 15px;
+            color: #555;
+        }
+
+        .hard-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .resume-wrapper {
+                grid-template-columns: 1fr;
+                margin: 10px;
+                border-radius: 8px;
+            }
+
+            .left-column {
+                padding: 30px 20px;
+            }
+
+            .right-column {
+                padding: 30px 20px;
+            }
+
+            .name {
+                font-size: 22px;
+            }
+
+            .right-section-title {
+                font-size: 20px;
+            }
+
+            .hard-skills {
+                justify-content: center;
+            }
+
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .left-column, .right-column {
+                padding: 20px 15px;
+            }
+
+            .name {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 16px;
+            }
+
+            .right-section-title {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-wrapper">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="profile-section">
+                <img src="assets/img.jpg" class="profile-photo" alt="avatar">
+                <h1 class="name">Хамраева Тамила<br>Аскаровна</h1>
+                <p class="position">Разработка лендинг сайтов</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span>youdo5725@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span>+7 705 133 45 65</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>Алматы</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Soft Skills</h2>
+                <ul class="skills-list">
+                    <li>Ответственность</li>
+                    <li>Креативность</li>
+                    <li>Работа в команде</li>
+                    <li>Внимательность к деталям</li>
+                    <li>Стрессоустойчивость</li>
+                    <li>Оптимизм</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="right-section">
+                <h2 class="right-section-title">Обо мне</h2>
+                <p class="about-text">
+                    Мне 20 лет, закончила Гуманитарно-Технический колледж по IT направлению в 2024 году.
+                </p>
+                <p class="about-text">
+                    На данный момент преподаю IT-курсы для детей: создание игр в Roblox Studio, робототехника, 
+                    программирование на Python и компьютерная грамотность.
+                </p>
+                <p class="about-text">
+                    Хочу развиваться дальше и ищу интересные проекты.
+                </p>
+            </div>
+
+            <div class="right-section">
+                <h2 class="right-section-title">Образование</h2>
+                <div class="education-item">
+                    <h3 class="education-title">Каскеленский Гуманитарно-Технический колледж</h3>
+                    <p class="education-details">2021-2024</p>
+                    <p class="education-description">Разработка сайтов (HTML + CSS)</p>
+                </div>
+                <div class="education-item">
+                    <h3 class="education-title">Образовательные курсы Web-дизайн</h3>
+                    <p class="education-details">2024</p>
+                </div>
+                <div class="education-item">
+                    <h3 class="education-title">Образовательные курсы Python</h3>
+                    <p class="education-details">2023</p>
+                    <p class="education-description">Basic/Medium level</p>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <h2 class="right-section-title">Hard Skills</h2>
+                <div class="hard-skills">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">Roblox Studio</span>
+                    <span class="skill-tag">MS Office</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
